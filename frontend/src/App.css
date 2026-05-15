@@ -1,0 +1,141 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ── Navbar ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background: #1a1d27;
+  border-bottom: 1px solid #2d3148;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7c6af7;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-icon { font-size: 1.3rem; }
+
+.nav-links { display: flex; gap: 0.25rem; }
+
+.nav-link {
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.nav-link:hover { background: #2d3148; color: #e2e8f0; }
+.nav-link.active { background: #2d2660; color: #a89cf7; font-weight: 500; }
+
+/* ── Layout ── */
+.main-content { flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+/* ── Cards ── */
+.card {
+  background: #1a1d27;
+  border: 1px solid #2d3148;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* ── Stat cards ── */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+
+.stat-card {
+  background: #1a1d27;
+  border: 1px solid #2d3148;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.stat-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+.stat-value { font-size: 2rem; font-weight: 700; color: #e2e8f0; }
+.stat-sub   { font-size: 0.8rem; color: #64748b; margin-top: 0.2rem; }
+.stat-value.green { color: #4ade80; }
+.stat-value.purple { color: #a89cf7; }
+.stat-value.amber  { color: #fbbf24; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-primary  { background: #7c6af7; color: #fff; }
+.btn-primary:hover  { background: #6b59e8; }
+.btn-success  { background: #16a34a; color: #fff; }
+.btn-success:hover  { background: #15803d; }
+.btn-danger   { background: #dc2626; color: #fff; }
+.btn-danger:hover   { background: #b91c1c; }
+.btn-ghost    { background: transparent; color: #94a3b8; border: 1px solid #2d3148; }
+.btn-ghost:hover    { background: #2d3148; color: #e2e8f0; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Form elements ── */
+.form-group  { margin-bottom: 1rem; }
+.form-label  { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; }
+.form-input  {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  background: #0f1117;
+  border: 1px solid #2d3148;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.form-input:focus { border-color: #7c6af7; }
+
+/* ── Table ── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th { text-align: left; padding: 0.75rem 1rem; color: #64748b; font-weight: 500; border-bottom: 1px solid #2d3148; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+td { padding: 0.75rem 1rem; border-bottom: 1px solid #1e2235; color: #cbd5e1; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #1e2235; }
+
+/* ── Badge ── */
+.badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500; }
+.badge-green  { background: #14532d; color: #4ade80; }
+.badge-red    { background: #450a0a; color: #f87171; }
+.badge-purple { background: #2d2660; color: #a89cf7; }
+
+/* ── Page titles ── */
+.page-title { font-size: 1.4rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.3rem; }
+.page-sub   { font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem; }
+
+/* ── Alert ── */
+.alert { padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.9rem; margin-bottom: 1rem; }
+.alert-success { background: #14532d; color: #4ade80; border: 1px solid #166534; }
+.alert-error   { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
+.alert-info    { background: #1e1b4b; color: #a89cf7; border: 1px solid #312e81; }

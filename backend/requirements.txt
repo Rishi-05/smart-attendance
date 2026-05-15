@@ -1,0 +1,14 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+python-multipart==0.0.9
+insightface==0.7.3
+faiss-cpu==1.13.2
+mediapipe==0.10.14
+opencv-python==4.9.0.80
+numpy==1.26.4
+Pillow==10.3.0
+python-dotenv==1.0.1
+pydantic-settings==2.2.1
+onnxruntime
