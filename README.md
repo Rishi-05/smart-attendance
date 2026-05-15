@@ -6,13 +6,13 @@ An AI-powered real-time attendance system using face recognition.
 ![Dashboard](screenshots/dashboard.png)
 
 ### Live Attendance
-![Live Attendance](screenshots/live-attendance.png)
+![Live Attendance](screenshots/live_attendance.png)
 
 ### Register Student — Webcam
-![Register Webcam](screenshots/register-webcam.png)
+![Register Webcam](screenshots/register_cam.png)
 
 ### Register Student — Upload Photos
-![Register Upload](screenshots/register-upload.png)
+![Register Upload](screenshots/register_upload.png)
 
 ## Tech Stack
 - **Frontend** — React + Vite
